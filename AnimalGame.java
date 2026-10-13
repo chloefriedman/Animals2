@@ -21,7 +21,7 @@ reports how many names they successfully entered.
         {
             try
             {
-                String current = sc.nextLine();
+                String current = sc.nextLine().toUpperCase();
                 animalCollection.add(current);
             }
             
@@ -61,9 +61,11 @@ reports how many names they successfully entered.
                         System.out.println("Not a valid animal name, try again");
                     }
                 }
+            
+               
                 if(userInput.toUpperCase().substring(0,1).equals(randomLet))
                 {
-                    boolean inList = temp.contains(userInput);
+                    boolean inList = temp.contains(userInput.toUpperCase());
                     if(inList)
                     {
                         temp.remove(userInput);
